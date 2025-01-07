@@ -2,7 +2,7 @@ import {
   horizontalScale,
   moderateScale,
   verticalScale,
-} from "@/src/shared/constants/dimensions";
+} from "@/src/shared/common/dimensions";
 import { StyleSheet } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 

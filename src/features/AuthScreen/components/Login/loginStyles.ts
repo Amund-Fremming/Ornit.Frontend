@@ -3,7 +3,7 @@ import {
   horizontalScale,
   moderateScale,
   verticalScale,
-} from "@/src/shared/constants/dimensions";
+} from "@/src/shared/common/dimensions";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({

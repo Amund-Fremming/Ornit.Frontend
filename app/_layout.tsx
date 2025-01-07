@@ -7,6 +7,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 export { ErrorBoundary } from "expo-router";
 
@@ -39,16 +40,20 @@ export default function RootLayout() {
   return <RootLayoutNav />;
 }
 
+const queryClient = new QueryClient();
+
 function RootLayoutNav() {
   return (
-    <AuthProvider>
-      <ActionModalProvider>
-        <InfoModalProvider>
-          <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          </Stack>
-        </InfoModalProvider>
-      </ActionModalProvider>
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <ActionModalProvider>
+          <InfoModalProvider>
+            <Stack>
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            </Stack>
+          </InfoModalProvider>
+        </ActionModalProvider>
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }

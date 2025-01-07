@@ -1,4 +1,4 @@
-import { moderateScale } from "@/src/shared/constants/dimensions";
+import { moderateScale } from "@/src/shared/common/dimensions";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({

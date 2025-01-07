@@ -4,7 +4,7 @@ import {
   horizontalScale,
   moderateScale,
   verticalScale,
-} from "../../constants/dimensions";
+} from "../../common/dimensions";
 
 export const styles = StyleSheet.create({
   overlay: {
